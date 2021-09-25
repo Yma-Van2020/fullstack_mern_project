@@ -40,6 +40,7 @@ Project is created with:
 
 ## More detailed Features
 
+* Built one to many relationships with nested documents using Mongoose/MongoDb
 * Login/ Registration validation with React, JSON Web token, bcrypt
 * After logging in, the user is able to chat with the GuidingBot for the usage of the app and helpful resources
 * User can fill out a form to get their mood score(either positive, neutral or negative)

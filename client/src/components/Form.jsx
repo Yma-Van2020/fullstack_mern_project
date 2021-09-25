@@ -8,11 +8,17 @@ import { analyzeAnsSentiment } from "../sentiment";
 const Form = ({userstate}) => {
     const history = useHistory()
     const [errorState, setErrorState] = useState({})
+    const [isChecked1, setIsChecked1] = useState(false);
+    const [isChecked2, setIsChecked2] = useState(false);
+    const [isChecked3, setIsChecked3] = useState(false);
     const [formState, setFormState] = useState({
         ans1:"",
         ans2:"",
         ans3:"",
         ans4:"",
+        ans5:false,
+        ans6:false,
+        ans7:false,
         dailyscore:0
     })
 
@@ -48,6 +54,31 @@ const Form = ({userstate}) => {
             console.log(errors)
           });
        
+      };
+
+      const handleOnChange1 = (e) => {
+        setIsChecked1(!isChecked1);
+        const { name} = e.target;
+        setFormState({
+          ...formState,
+          [name]: !isChecked1,
+        });
+      };
+      const handleOnChange2 = (e) => {
+        setIsChecked2(!isChecked2);
+        const { name} = e.target;
+        setFormState({
+          ...formState,
+          [name]: !isChecked2,
+        });
+      };
+      const handleOnChange3 = (e) => {
+        setIsChecked3(!isChecked3);
+        const { name} = e.target;
+        setFormState({
+          ...formState,
+          [name]: !isChecked3,
+        });
       };
 
 
@@ -209,6 +240,15 @@ const Form = ({userstate}) => {
                     {(errorState.ans4)? <small className="ml-1 text-danger font-weight-bold">{errorState.ans4.message}</small>:null}
                     <input onChange={changeHandler} type="text" class="form-control" name="ans4" id="exampleFormControlInput1" />
                 </div>
+
+              <div class="form-group">
+          <label htmlFor="pl">Have you had little interest or pleasure in doing things?</label><br/>
+          <input onChange={handleOnChange1} className="form-check-input" type="checkbox" name="ans5" value={isChecked1} /><br/>
+          <label htmlFor="ep">Have you had trouble falling asleep, staying asleep, or have you been sleeping too much?</label><br/>
+          <input onChange={handleOnChange2} className="form-check-input" type="checkbox" name="ans6" value={isChecked2}/><br/>
+          <label htmlFor="hh">Have you been feeling bad about yourself – or feeling that you are a failure, or that you have let yourself or your family down?</label><br/>
+          <input onChange={handleOnChange3} className="form-check-input" type="checkbox"  name="ans7" id="hh" value={isChecked3}/><br/>
+          </div>
                 <input class="btn btn-secondary" type="submit" value="Submit" />&nbsp;&nbsp;
                 <Link to="/dashboard"><button class="btn btn-secondary">Go Back</button></Link>
                 </form>

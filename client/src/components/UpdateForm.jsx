@@ -17,7 +17,7 @@ const UpdateForm = ({userstate}) => {
         setFormState({
           ...formState,
           [name]: value,
-          dailyscore:analyzeAnsSentiment(formState.ans1,formState.ans2,formState.ans3,formState.ans4)
+          dailyscore:analyzeAnsSentiment(formState.ans1,formState.ans2,formState.ans3,formState.ans4,formState.ans5,formState.ans6,formState.ans7)
         });
       };
 

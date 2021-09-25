@@ -21,6 +21,18 @@ const  MoodSchema = new mongoose.Schema({
         required:[true, "This field is required"],
         minlength:[3, "Input should be at least 3 chars long"]
     },
+    ans5:{
+        type:String,
+        required:[true, "This field is required"]
+    },
+    ans6:{
+        type:String,
+        required:[true, "This field is required"]
+    },
+    ans7:{
+        type:String,
+        required:[true, "This field is required"]
+    },
     dailyscore:{
         type:Number
     }

@@ -37,6 +37,7 @@ Project is created with:
 "react-firebase-hooks": "^3.0.4",
 "react-router-dom": "^5.3.0"
 "moment"
+"sentiment"
 
 ## More detailed Features
 

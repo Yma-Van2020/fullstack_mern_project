@@ -1,6 +1,6 @@
 
 # Mood Score -- Emotion analyzing App
-This app is used to calculate a user's weekly mood score and provide some resources to maintain psychological health. After logging in, the user can chat with the GuidingBot for the usage of the app. Users can fill out a form. The app then uses NaturalJS to analyze the sentiment of the user's answers to produce a mood score. Users can view and modify past forms. The most recent mood scores produced will be reflected on the line chart along with the weekly average mood score. Users can then chat with the guidingBot for further assistance based on the scores that they received.
+This app is used to calculate a user's weekly mood score and provide some resources to maintain psychological health. After logging in, the user can chat with the GuidingBot for the usage of the app. Users can fill out a form. The app then uses Node.js module(Sentiment)https://www.npmjs.com/package/sentiment#how-it-works to analyze the sentiment of the user's answers to produce a mood score. Users can view and modify past forms. The most recent mood scores produced will be reflected on the line chart along with the weekly average mood score. Users can then chat with the guidingBot for further assistance based on the scores that they received.
 
 
 ## Technologies
@@ -20,21 +20,19 @@ Project is created with:
 * Less
 * Node.js
 * ChartJS
-* NaturalJs -sentiment parser
+* AFINN-based sentiment analysis
 * JWT/Cookies
 
 ## Dependencies 
 "axios": "^0.21.4",
 "bcrypt": "^5.0.1",
 "bcryptjs": "^2.4.3",
-"chart.js": "^3.5.1",
 "cookie-parser": "^1.4.5",
 "cors": "^2.8.5",
 "express": "^4.17.1",
 "firebase": "^9.0.2",
 "jsonwebtoken": "^8.5.1",
 "mongoose": "^6.0.6",
-"natural": "^5.1.1",
 "react-chartjs-2": "^3.0.5",
 "react-firebase-hooks": "^3.0.4",
 "react-router-dom": "^5.3.0"
@@ -44,6 +42,7 @@ Project is created with:
 
 * Login/ Registration validation with React, JSON Web token, bcrypt
 * After logging in, the user is able to chat with the GuidingBot for the usage of the app and helpful resources
+* User can fill out a form to get their mood score(either positive, neutral or negative)
 * User is able to view and modify past forms 
 * User can use the calendar to keep track of their activities
 * After filling out forms, the most recently mood scores produced will be reflected on the line chart 

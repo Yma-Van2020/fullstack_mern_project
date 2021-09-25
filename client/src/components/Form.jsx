@@ -25,7 +25,6 @@ const Form = ({userstate}) => {
         })
 
       };
-
     
       const submitHandler = (e) => {
         e.preventDefault();

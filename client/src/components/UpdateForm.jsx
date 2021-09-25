@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import { useHistory, useParams} from "react-router-dom";
 import { Link } from "react-router-dom";
-import { analyzeAnsSentiment } from "../naturalfunc";
+import { analyzeAnsSentiment } from "../sentiment";
 
 const UpdateForm = ({userstate}) => {
     const history = useHistory()

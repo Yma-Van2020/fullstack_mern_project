@@ -8,7 +8,7 @@ module.exports = {
     let answer3 = sentiment.analyze(ans3).score;
     let answer4 = sentiment.analyze(ans4).score;
 
-    let sentimentScore = (answer1 + answer2 + answer3+ answer4)
+    let sentimentScore = (answer1 + answer2 + answer3+ answer4) 
     console.log(sentimentScore)
     return sentimentScore.toFixed(1)
     }

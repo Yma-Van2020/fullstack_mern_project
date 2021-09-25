@@ -37,6 +37,7 @@ Project is created with:
 "react-firebase-hooks": "^3.0.4",
 "react-router-dom": "^5.3.0"
 "moment"
+"sentiment"
 
 ## More detailed Features
 
@@ -69,7 +70,7 @@ yarn start
 ![Screen Shot 2021-09-24 at 7 06 34 PM](https://user-images.githubusercontent.com/74885386/134754324-5bc8c1ad-fe76-4643-b597-d534e22e0097.png)
 
 ![Screen Shot 2021-09-23 at 8 52 04 PM](https://user-images.githubusercontent.com/74885386/134616975-31cbb7a9-3465-438e-b0f8-88ea67d5252e.png)
-![Screen Shot 2021-09-23 at 8 46 46 PM](https://user-images.githubusercontent.com/74885386/134616939-6bf13986-5771-44b4-8d0a-1159df76ee6e.png)
+
 ![Screen Shot 2021-09-23 at 8 49 37 PM](https://user-images.githubusercontent.com/74885386/134616953-204211dc-40dd-45e4-a3f2-92f613b91485.png)
 ![Screen Shot 2021-09-23 at 8 49 44 PM](https://user-images.githubusercontent.com/74885386/134616960-240f60f2-edde-400b-b3bc-7055d7a7bb2d.png)
 ![Screen Shot 2021-09-24 at 1 19 42 PM](https://user-images.githubusercontent.com/74885386/134735084-7a5c01d6-4583-4571-b2d0-563b2b8a7336.png)
@@ -79,8 +80,6 @@ yarn start
 ![Screen Shot 2021-09-23 at 9 17 35 PM](https://user-images.githubusercontent.com/74885386/134618319-389264c1-1078-40d8-a246-47a87a9b38e9.png)
 ![Screen Shot 2021-09-24 at 1 18 02 PM](https://user-images.githubusercontent.com/74885386/134735111-4f15633a-f219-4b7e-bc3e-85453b42dc4e.png)
 
-
-![Screen Shot 2021-09-23 at 9 22 01 PM](https://user-images.githubusercontent.com/74885386/134618325-f1b18df9-8b54-4a8e-92b5-ead353bc35cb.png)
 
 ![Screen Shot 2021-09-23 at 8 52 32 PM](https://user-images.githubusercontent.com/74885386/134616988-cfefe834-8fab-46ea-a8e9-066b378b94fb.png)
 ![Screen Shot 2021-09-23 at 8 54 22 PM](https://user-images.githubusercontent.com/74885386/134616991-c7507f66-6ece-4c6e-86e7-af23b74da3ef.png)

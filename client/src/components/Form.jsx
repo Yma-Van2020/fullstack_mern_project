@@ -191,22 +191,22 @@ const Form = ({userstate}) => {
                 
                 <form onSubmit={submitHandler} style={{padding:"40px 100px 100px 100px"}}>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">How are you today?</label>
+                    <label for="exampleFormControlInput1">Describe your current mood in one sentence</label>
                     {(errorState.ans1)? <small className="ml-1 text-danger font-weight-bold">{errorState.ans1.message}</small>:null}
                     <input onChange={changeHandler} type="text" class="form-control" name="ans1" id="exampleFormControlInput1" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Have you been productive lately?</label>
+                    <label for="exampleFormControlInput1">Are you feeling optimistic?</label>
                     {(errorState.ans2)? <small className="ml-1 text-danger font-weight-bold">{errorState.ans2.message}</small>:null}
                     <input onChange={changeHandler} type="text" class="form-control" name="ans2" id="exampleFormControlInput1" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">What are the obsticles that you have concured today?</label>
+                    <label for="exampleFormControlInput1">What is your biggest accomplishment of the day?</label>
                     {(errorState.ans3)? <small className="ml-1 text-danger font-weight-bold">{errorState.ans3.message}</small>:null}
                     <input onChange={changeHandler} type="text" class="form-control" name="ans3" id="exampleFormControlInput1" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Describe your current mood in one sentence</label>
+                    <label for="exampleFormControlInput1">Have you been sociable?</label>
                     {(errorState.ans4)? <small className="ml-1 text-danger font-weight-bold">{errorState.ans4.message}</small>:null}
                     <input onChange={changeHandler} type="text" class="form-control" name="ans4" id="exampleFormControlInput1" />
                 </div>

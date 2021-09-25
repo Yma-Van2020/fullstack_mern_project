@@ -1,0 +1,21 @@
+.link-list {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .link-list-item {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .link-list-item-url {
+    text-decoration: none;
+    margin: 6px;
+    display: block;
+    color: #1d1d1d;
+    background-color: #def5cd;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: fantasy;
+    box-shadow: 2px 2px 4px rgba(65, 65, 65, 0.4);
+  }

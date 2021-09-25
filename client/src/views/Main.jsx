@@ -40,7 +40,7 @@ const Main = ({ userstate, setUserstate }) => {
         }
         setScores(scores.reverse());
         
-        setAve((sum / 7).toFixed(1));
+        setAve((sum / 7).toFixed(2));
         setLoaded(true);
       })
       .catch((err) => console.log(err));

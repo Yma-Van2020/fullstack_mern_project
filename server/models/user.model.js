@@ -38,14 +38,14 @@ UserSchema.pre('validate', function(next) {
     if (this.password !== this.repeatPassword) {
         this.invalidate('repeatPassword', 'Password must match repeat password');
     }
-    // ANY OTHER VALIDATIONS THAT YOU WANT TO RUN
+   
     next();
 });
 
 // USE BCRYPT TO HASH PASSWORD
 UserSchema.pre('save', function(next) {
     var user = this;
-     // only hash the password if it has been modified (or is new)
+     // only hash the password if it has been modified 
     if (!user.isModified('password')) return next();
     bcrypt.hash(this.password, 10)
         .then(hash => {

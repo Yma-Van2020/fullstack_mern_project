@@ -55,7 +55,7 @@ Project is created with:
 
 ```javascript
 npm install express mongoose cors
-npm install axios react-router-dom cookie-parser bcrypt natural jsonwebtoken
+npm install axios react-router-dom cookie-parser bcrypt sentiment jsonwebtoken
 npm install react-chartjs-2 moment
 
 nodemon server.js

@@ -10,10 +10,7 @@ module.exports = {
     let answer5 = 0
     let answer6 = 0
     let answer7 = 0
-    console.log("hi")
-    console.log(ans5)
-    console.log(ans6)
-    console.log(ans7)
+   console.log(ans5)
     if(ans5 == true){
       answer5 = -2
     }
@@ -25,7 +22,7 @@ module.exports = {
     }
 
     let sentimentScore = (answer1 + answer2 + answer3+ answer4 + answer5 + answer6 + answer7) 
-    console.log(sentimentScore)
+
     return sentimentScore.toFixed(1)
     }
 }

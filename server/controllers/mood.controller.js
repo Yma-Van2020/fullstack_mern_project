@@ -59,11 +59,13 @@ module.exports.updateMood = async (req, res) =>{
    if(!user){
     return res.status(400).json(`user with ID ${_id} does not exist`)
     } 
-    console.log(user)
     user.moodScore.id(mood_id).ans1 = req.body.ans1
     user.moodScore.id(mood_id).ans2 = req.body.ans2
     user.moodScore.id(mood_id).ans3 = req.body.ans3
     user.moodScore.id(mood_id).ans4 = req.body.ans4
+    user.moodScore.id(mood_id).ans5 = req.body.ans5
+    user.moodScore.id(mood_id).ans6 = req.body.ans6
+    user.moodScore.id(mood_id).ans7 = req.body.ans7
 
     const newMood = new Mood(req.body)
     user.markModified("moods")

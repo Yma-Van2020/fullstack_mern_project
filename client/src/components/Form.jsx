@@ -33,7 +33,7 @@ const Form = ({ userstate }) => {
         withCredentials: true,
       })
       .then((res) => {
-        history.push("/result/" + res.data._id);
+        history.push("/result/" + formState.dailyscore);
       })
       .catch((err) => {
         const { errors } = err.response.data;
@@ -221,7 +221,7 @@ const Form = ({ userstate }) => {
               <div class="container-fluid">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                   <h1 class="h3 mb-0 text-gray-800">
-                    Please fill out the form below to analyze your mood score
+                    Please fill out the form below to analyze your daily mood score
                   </h1>
                 </div>
                 <div>

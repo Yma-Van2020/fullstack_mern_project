@@ -60,7 +60,7 @@ const Result = () => {
                     })}
                 />
                 )}
-            </ChangingProgressProvider>: <div style={circle}>{score}</div>
+            </ChangingProgressProvider>: <div style={circle}>{id}</div>
             
             }
           </div>  

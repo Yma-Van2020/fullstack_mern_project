@@ -17,23 +17,35 @@ const UpdateForm = ({userstate}) => {
         setFormState({
           ...formState,
           [name]: value,
-          dailyscore:analyzeAnsSentiment(formState.ans1,formState.ans2,formState.ans3,formState.ans4,formState.ans5,formState.ans6,formState.ans7)
+          dailyscore:Number(analyzeAnsSentiment(formState.ans1,formState.ans2,formState.ans3,formState.ans4,formState.ans5,formState.ans6,formState.ans7))
         });
       };
 
       useEffect(() => {
         axios.get("http://localhost:8000/api/moods/" + id, {withCredentials:true})
         .then((res) => {
-          console.log(res)
             setFormState(res.data)
         }).catch(err => console.log(err))
     }, [])
+
+    const handleOnChange = (e) => {
+      const { name } = e.target;
+      setFormState({
+        ...formState,
+        [name]: !formState[name],
+        dailyscore:Number(analyzeAnsSentiment(formState.ans1,formState.ans2,formState.ans3,formState.ans4,formState.ans5,formState.ans6,formState.ans7))
+      });
+    };
+
+   
     
       const submitHandler = (e) => {
         e.preventDefault();
         axios
           .put("http://localhost:8000/api/moods/" + id, formState, {withCredentials:true})
-          .then((res) => history.push("/result/" + res.data._id))
+          .then((res) =>{
+            console.log(console.log(formState))
+            history.push("/result/" + formState.dailyscore)})
           .catch((err) => {
             console.log(err)
             const errRes = err.response.data.errors;
@@ -46,6 +58,7 @@ const UpdateForm = ({userstate}) => {
        
       };
 
+     
     return (
         <div>
                  <>
@@ -181,6 +194,51 @@ const UpdateForm = ({userstate}) => {
                 <div>
                 
                 <form onSubmit={submitHandler} style={{padding:"40px 100px 100px 100px"}}>
+                <div class="form-group">
+                      <label htmlFor="pl">
+                        Have you had little interest or pleasure in doing
+                        things?
+                      </label>
+                      <br />
+                      <input
+                        checked={formState.ans5}
+                        onChange={handleOnChange}
+                        className="form-check-input"
+                        type="checkbox"
+                        name="ans5"
+                        value={formState.ans5}
+                      />
+                      <br />
+                      <label htmlFor="ep">
+                        Have you had trouble falling asleep, staying asleep, or
+                        have you been sleeping too much?
+                      </label>
+                      <br />
+                      <input
+                         checked={formState.ans6}
+                         onChange={handleOnChange}
+                        className="form-check-input"
+                        type="checkbox"
+                        name="ans6"
+                        value={formState.ans6}
+                      />
+                      <br />
+                      <label htmlFor="hh">
+                        Have you been feeling bad about yourself – or feeling
+                        that you are a failure, or that you have let yourself or
+                        your family down?
+                      </label>
+                      <br />
+                      <input
+                        checked={formState.ans7}
+                        onChange={handleOnChange}
+                        className="form-check-input"
+                        type="checkbox"
+                        name="ans7"
+                        value={formState.ans7}
+                      />
+                      <br />
+                    </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">How are you today?</label>
                     <p style={{color:"red"}}key={0}>{errors[0]}</p>

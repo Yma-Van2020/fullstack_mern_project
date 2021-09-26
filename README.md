@@ -79,7 +79,8 @@ yarn start
 
 ![Screen Shot 2021-09-23 at 9 14 49 PM](https://user-images.githubusercontent.com/74885386/134618301-55e79d80-2071-48b6-9f1d-7e0d94e71c1b.png)
 ![Screen Shot 2021-09-23 at 9 17 35 PM](https://user-images.githubusercontent.com/74885386/134618319-389264c1-1078-40d8-a246-47a87a9b38e9.png)
-![Screen Shot 2021-09-24 at 1 18 02 PM](https://user-images.githubusercontent.com/74885386/134735111-4f15633a-f219-4b7e-bc3e-85453b42dc4e.png)
+![Screen Shot 2021-09-25 at 7 00 44 PM](https://user-images.githubusercontent.com/74885386/134790647-2626ae3f-5340-470a-85cb-6434690cb970.png)
+
 
 ![Screen Shot 2021-09-25 at 7 01 02 PM](https://user-images.githubusercontent.com/74885386/134790631-8182c5fe-f012-4966-ae6b-4b3911151987.png)
 

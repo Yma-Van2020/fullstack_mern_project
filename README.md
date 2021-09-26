@@ -79,10 +79,10 @@ yarn start
 
 ![Screen Shot 2021-09-23 at 9 14 49 PM](https://user-images.githubusercontent.com/74885386/134618301-55e79d80-2071-48b6-9f1d-7e0d94e71c1b.png)
 ![Screen Shot 2021-09-23 at 9 17 35 PM](https://user-images.githubusercontent.com/74885386/134618319-389264c1-1078-40d8-a246-47a87a9b38e9.png)
-![Screen Shot 2021-09-25 at 7 00 44 PM](https://user-images.githubusercontent.com/74885386/134790647-2626ae3f-5340-470a-85cb-6434690cb970.png)
+![Screen Shot 2021-09-25 at 7 03 31 PM](https://user-images.githubusercontent.com/74885386/134790668-43225ef1-f968-4c08-8979-6c884b8f77ac.png)
 
+![Screen Shot 2021-09-25 at 7 00 44 PM](https://user-images.githubusercontent.com/74885386/134790675-2e334314-aaa5-4e3e-89ba-5906b2d1a36e.png)
 
-![Screen Shot 2021-09-25 at 7 01 02 PM](https://user-images.githubusercontent.com/74885386/134790631-8182c5fe-f012-4966-ae6b-4b3911151987.png)
 
 ![Screen Shot 2021-09-23 at 8 52 32 PM](https://user-images.githubusercontent.com/74885386/134616988-cfefe834-8fab-46ea-a8e9-066b378b94fb.png)
 ![Screen Shot 2021-09-23 at 8 54 22 PM](https://user-images.githubusercontent.com/74885386/134616991-c7507f66-6ece-4c6e-86e7-af23b74da3ef.png)

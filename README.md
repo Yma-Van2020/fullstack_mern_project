@@ -2,6 +2,8 @@
 # Mood Score -- sentiment detecting App
 This app is used to calculate a user's weekly mood score and provide some resources to maintain psychological health. After logging in, the user can chat with the GuidingBot for the usage of the app. Users can fill out a form. The app then uses Node.js module(Sentiment)https://www.npmjs.com/package/sentiment to analyze the sentiment of the user's answers to produce a mood score. Users can view and modify past forms. The most recent mood scores produced will be reflected on the line chart along with the weekly average mood score. Users can then chat with the guidingBot for further assistance based on the scores that they received.
 
+Project demo:
+https://drive.google.com/file/d/1vvNC9FyXFDkHtRAWwQ7RBh9oLt34QUUs/view?usp=drive_link
 
 ## Technologies
 

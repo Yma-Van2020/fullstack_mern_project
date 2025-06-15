@@ -1,38 +1,70 @@
 # syntax=docker/dockerfile:1
 
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Dockerfile reference guide at
-# https://docs.docker.com/go/dockerfile-reference/
-
-# Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
-
-ARG NODE_VERSION=22.14.0
-
-FROM node:${NODE_VERSION}-alpine
-
-# Use production node environment by default.
-ENV NODE_ENV production
-
+########################################
+# Stage 0 — Base: shared setup/tools
+########################################
+FROM node:22.14.0-alpine AS base
 
 WORKDIR /usr/src/app
+ENV NODE_ENV=development
 
-# Download dependencies as a separate step to take advantage of Docker's caching.
-# Leverage a cache mount to /root/.yarn to speed up subsequent builds.
-# Leverage a bind mounts to package.json and yarn.lock to avoid having to copy them into
-# into this layer.
-RUN --mount=type=bind,source=package.json,target=package.json \
-    --mount=type=bind,source=yarn.lock,target=yarn.lock \
-    --mount=type=cache,target=/root/.yarn \
-    yarn install --production --frozen-lockfile
+# Install dependencies common to all builds (e.g., bash)
+RUN apk add --no-cache bash
 
-# Run the application as a non-root user.
+########################################
+# Stage 1 — Build Client
+########################################
+FROM base AS build-client
+
+WORKDIR /usr/src/app/client
+
+# Copy and install client dependencies
+COPY client/package.json client/yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# Copy client source and build
+COPY client ./
+RUN yarn build
+
+########################################
+# Stage 2 — Build Server
+########################################
+FROM base AS build-server
+
+WORKDIR /usr/src/app/server
+
+# Copy and install server dependencies
+COPY server/package.json server/yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# Copy server source code
+COPY server ./
+
+# Optional: compile TypeScript or other build step
+# RUN yarn build
+
+########################################
+# Stage 3 — Final Production Image
+########################################
+FROM node:22.14.0-alpine AS prod
+
+WORKDIR /usr/src/app
+ENV NODE_ENV=production
+
+# Copy built client into final image
+COPY --from=build-client /usr/src/app/client/build ./client/build
+
+# Copy server code into final image
+COPY --from=build-server /usr/src/app/server ./server
+
+# Install only production dependencies for server
+WORKDIR /usr/src/app/server
+RUN yarn install --production --frozen-lockfile
+
+# Use a non-root user for security
 USER node
 
-# Copy the rest of the source files into the image.
-COPY . .
-
-# Expose the port that the application listens on.
 EXPOSE 5000
 
-# Run the application.
-CMD node index.js
+# Start server (adjust if your main file is elsewhere)
+CMD ["node", "index.js"]
